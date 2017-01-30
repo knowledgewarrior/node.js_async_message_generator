@@ -1,0 +1,38 @@
+{
+    "serviceType": "cloud.elmer.service",
+    "serviceRealm": "global",
+    "serviceVersion": 3,
+    "description": "Pings cloud services to generate traffic.",
+    "ops": {
+        "smashAll": {
+            "description": "Smash wascally wabbits - use 1 - 10k smashers",
+            "examples": {
+                 "Smash all cloud services": {
+                    "smashers": 10
+                }
+
+            }
+        },
+        "smashOne": {
+            "description": "Smash wascally wabbits - use 1 - 10k smashers",
+            "examples": {
+                 "Smash a single cloud service": {
+                    "service": "cloud.calculator",
+                    "version": 3,
+                    "realm": "global",
+                    "smashers": 100
+                }
+
+            }
+        }
+    },
+    "errorCodes": {
+        "INVALID_SMASHERS": {
+            "status": 500,
+            "severity": "ERROR",
+            "messageTemplate": "Invalid number of smashers",
+            "origin": "SERVICE"
+        }
+    }
+}
+
